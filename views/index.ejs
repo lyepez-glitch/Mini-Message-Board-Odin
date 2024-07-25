@@ -9,10 +9,11 @@
    <a href="./messages/new">Click here to add a message</a>
    <% messages.forEach(function(msg){ %>
         <div id="msgCont">
-          <div> <%= msg.user %> </div>
+          <div> <%= msg.username %> </div>
           <div> <%= msg.text %> </div>
           <div> <%= msg.added %> </div>
-          <button id = "open"><a target="_blank" href="/messages/<%=msg.user%>/edit">Open</a></button>
+          <button id = "open"><a target="_blank" href="/messages/edit/<%= msg.id %>">Open</a></button>
+           <button id = "delete"><a href="/messages/delete/<%= msg.id %>">Delete</a></button>
         </div>
 
 

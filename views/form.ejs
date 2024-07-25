@@ -2,15 +2,15 @@
 <html>
   <head>
     <title>New Message</title>
-    <link rel="stylesheet" href="styles.css">
+
   </head>
   <body>
 
    <% if (edit) { %>
    <h1>Edit Message</h1>
-      <form method="POST" action="/messages/new">
+      <form method="POST" action="/messages/edit/<%=message.id%>">
         <label for="author">Author:</label><br>
-          <input value = "<%=message.user%>" type="text" id="author" name="author"><br>
+          <input value = "<%=message.username%>" type="text" id="author" name="author"><br>
           <label for="msg">Message:</label><br>
           <input value = "<%=message.text%>"type="text" id="msg" name="msg"><br>
           <input type="submit" value="Submit">
